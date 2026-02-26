@@ -1,0 +1,45 @@
+The LaTeX Project Public License (LPPL), Version 1.3c
+=====================================================
+
+This work may be distributed and/or modified under the conditions of the
+LaTeX Project Public License, either version 1.3c of this license or (at
+your option) any later version.
+
+The latest version of this license is in:
+   https://www.latex-project.org/lppl.txt
+
+and version 1.3c or later is part of all distributions of LaTeX version
+2008 or later.
+
+
+ORIGINAL WORK
+-------------
+
+The document class (bisuthesis.cls) is derived from ThuThesis:
+   Copyright (C) 2005-2021 Tsinghua University TUNA Association
+   Original project: https://github.com/tuna/thuthesis
+
+The bibliography styles (bisuthesis-*.bst) are derived from gbt7714-bibtex-style:
+   Copyright (C) 2016-2021 Zeping Lee
+   Original project: https://github.com/CTeX-org/gbt7714-bibtex-style
+
+Both original works are licensed under the LPPL v1.3c.
+
+
+MODIFICATIONS (THIS DERIVATIVE WORK)
+-------------------------------------
+
+   Copyright (C) 2026 xuwudawei (https://github.com/xuwudawei)
+
+This derivative work (BisuThesis) was created by adapting ThuThesis for use
+at Beijing International Studies University (BISU). In compliance with the
+LPPL, all modified files have been renamed (thuthesis -> bisuthesis,
+thusetup -> bisusetup, etc.) to clearly distinguish them from the originals.
+
+Changes from the original ThuThesis:
+  - Renamed all files and internal identifiers from thu/thuthesis to bisu/bisuthesis
+  - Adapted university-specific text for BISU (Beijing International Studies University)
+  - Modified cover page and formatting to match BISU thesis requirements
+
+This derivative work is NOT affiliated with, endorsed by, or associated with
+Tsinghua University or the TUNA Association.

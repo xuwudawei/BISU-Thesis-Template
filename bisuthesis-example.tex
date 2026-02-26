@@ -1,0 +1,94 @@
+% !TeX program = xelatex
+% !TeX spellcheck = en_US
+
+\documentclass[degree=master, language=english]{bisuthesis}
+  % 学位 degree:
+  %   doctor | master | bachelor | postdoc
+  % 学位类型 degree-type:
+  %   academic | professional
+  % 语言 language
+  %   chinese | english
+  % 字体库 fontset
+  %   windows | mac | fandol | ubuntu
+  % For final submission, use Windows platform fonts
+
+% Load thesis configuration and packages
+\input{bisusetup}
+
+\begin{document}
+
+\let\cleardoublepage\clearpage
+
+% ============================================================
+% COVER PAGE
+% ============================================================
+% Option 1: Include your cover page PDF (recommended)
+\includepdf[pages=-,pagecommand={},fitpaper=true]{frontcover_without_supervisor_name}
+% Option 2: If you don't have a cover PDF yet, comment out the line above
+%   and uncomment \maketitle below to generate one automatically
+% \maketitle
+
+% ============================================================
+% FRONT MATTER (Roman numeral page numbers: i, ii, iii...)
+% ============================================================
+\frontmatter
+
+% Statement of Originality (原创性声明)
+\input{data/originality}
+
+% Authorization of Use (使用授权说明)
+\input{data/authorization}
+
+% Statement of Confidentiality (密级声明)
+\input{data/confidentiality}
+
+% Acknowledgements
+\input{data/acknowledgements}
+
+% Abstract (English first, then Chinese)
+\input{data/abstract}
+
+% Table of Contents
+\tableofcontents
+
+% List of Figures
+\listoffigures
+
+% List of Tables
+\listoftables
+
+% Extra Headings (Glossary / List of Abbreviations / List of Symbols)
+% Uncomment and edit if needed:
+% \input{data/denotation}
+
+% ============================================================
+% MAIN TEXT (Arabic page numbers: 1, 2, 3...)
+% ============================================================
+\mainmatter
+
+\input{data/chap01}
+\input{data/chap02}
+\input{data/chap03}
+\input{data/chap04}
+\input{data/chap05}
+\input{data/chap06}
+
+% ============================================================
+% BACK MATTER
+% ============================================================
+\backmatter
+
+% References
+\bibliography{ref/refs}
+
+% Appendices
+\appendix
+\input{data/appendix}
+
+% Author's Curriculum Vitae
+\input{data/resume}
+
+% Supervisor's Evaluation (导师评语)
+\input{data/supervisor-evaluation}
+
+\end{document}

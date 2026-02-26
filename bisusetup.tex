@@ -1,0 +1,171 @@
+% !TeX root = ./bisuthesis-example.tex
+
+% ============================================================
+% Thesis Configuration — BISU School of Business 2026
+% ============================================================
+
+\bisusetup{
+  %
+  % Output format: print (double-sided) or electronic (single-sided)
+  output = electronic,
+  %
+  % Title (Chinese and English)
+  %   Use "\\" for manual line breaks
+  title  = {中文标题},
+  title* = {English Title of Your Thesis},
+  %
+  % Degree name
+  degree-name  = {管理学硕士},
+  degree-name* = {Master of Management},
+  %
+  % School / Department
+  department = {School of Business},
+  %
+  % Program category: IMBA / IMiM / IMPAcc
+  discipline  = {工商管理},
+  discipline* = {IMBA},
+  %
+  % Author name
+  author  = {你的中文名},
+  author* = {Your Name},
+  %
+  % Supervisor
+  supervisor  = {导师中文名, 教授},
+  supervisor* = {Professor Supervisor Name},
+  %
+  % Date (ISO format)
+  date = {2026-06-01},
+  %
+  % Do not generate spine on blank page after cover
+  include-spine = false,
+  %
+  % Classification number (分类号)
+  % clc = {C93},
+  %
+  % Confidentiality (密级): 秘密, 机密, 绝密
+  % secret-level = {公开},
+}
+
+% ============================================================
+% Packages
+% ============================================================
+
+% AMS theorem environments
+\usepackage{amsthm}
+
+% Math font
+\bisusetup{
+  math-font = xits,
+}
+
+% ============================================================
+% Page Layout — BISU 2026 Requirements
+% ============================================================
+
+% Margins: 1 inch on all sides (2.54 cm)
+\geometry{
+  top    = 1in,
+  bottom = 1in,
+  left   = 1in,
+  right  = 1in,
+  headheight = 0pt,
+  headsep    = 0pt,
+}
+
+% Line spacing: 1.5
+\usepackage{setspace}
+\onehalfspacing
+
+% ============================================================
+% Font Settings — Times New Roman, 12pt body
+% ============================================================
+% The bisuthesis class already loads Times New Roman via fontset.
+% Ensure body text is 12pt (set in documentclass options via the class).
+% Caption font size: 10-11pt
+
+\usepackage{caption}
+\captionsetup{
+  font       = {small, singlespacing},
+  labelfont  = {bf},
+  justification = centering,
+}
+
+% ============================================================
+% Page Numbers — Bottom center, 12pt Times New Roman
+% ============================================================
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand\headrulewidth{0pt}
+\fancyfoot[C]{\fontsize{12pt}{14pt}\selectfont\thepage}
+\fancypagestyle{plain}{%
+  \fancyhf{}
+  \renewcommand\headrulewidth{0pt}
+  \fancyfoot[C]{\fontsize{12pt}{14pt}\selectfont\thepage}
+}
+
+% ============================================================
+% Table and Figure Packages
+% ============================================================
+
+% Footnotes in tables
+\usepackage{threeparttable}
+\usepackage{makecell}
+
+% Multi-row support in tables
+\usepackage{multirow}
+
+% "Three-line" table style (booktabs)
+\usepackage{booktabs}
+
+% SVG support
+\usepackage{svg}
+
+% Long tables spanning multiple pages
+\usepackage{longtable}
+
+% Algorithms
+\usepackage{algorithm}
+\usepackage{algorithmic}
+
+% Units
+\usepackage{siunitx}
+\usepackage{adjustbox}
+
+% PDF inclusion (for cover page, etc.)
+\usepackage{pdfpages}
+
+% Colors for tables
+\usepackage{xcolor,colortbl}
+\definecolor{Gray}{gray}{0.85}
+
+% ============================================================
+% Bibliography — APA-style (Author, Year)
+% ============================================================
+
+% Using BibTeX + natbib (author-year)
+\usepackage[sort]{natbib}
+\bibliographystyle{bisuthesis-author-year}
+
+% ============================================================
+% Figures directory
+% ============================================================
+\graphicspath{{figures/}}
+
+% ============================================================
+% Math commands
+% ============================================================
+\makeatletter
+\newcommand\dif{%
+  \mathop{}\!%
+  \ifbisu@math@style@TeX
+    d%
+  \else
+    \mathrm{d}%
+  \fi
+}
+\makeatother
+
+% hyperref should be loaded last
+\usepackage{hyperref}
